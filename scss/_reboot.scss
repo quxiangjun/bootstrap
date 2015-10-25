@@ -204,6 +204,19 @@ img {
   cursor: pointer;
 }
 
+// Avoid 300ms click delay on touch devices that support touch-action (see http://caniuse.com/#feat=css-touch-action )
+// In particular, this should be supported in the next post-iOS-9.1 Safari feature release (see http://trac.webkit.org/changeset/191452 )
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary {
+  touch-action: manipulation;
+}
 
 //
 // Tables
